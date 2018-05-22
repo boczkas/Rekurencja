@@ -2,7 +2,23 @@ public class Factorial {
     public static void main(String[] args) {
 //        System.out.println(factorial(3));
 //        System.out.println(bunnyEars(1));
-        System.out.println(fibonacci(5));
+//        System.out.println(fibonacci(5));
+        System.out.println(bunnyEars2(2));
+    }
+
+    private static int bunnyEars2(int bunnys) {
+        if(bunnys == 0){
+            return 0;
+        }
+
+        int count = 2;
+
+        if(bunnys % 2 == 0){
+            count = 3;
+        }
+
+        return count + bunnyEars(bunnys - 1);
+
     }
 
     private static int fibonacci(int n) {
